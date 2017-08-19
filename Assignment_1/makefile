@@ -25,6 +25,8 @@ classes: $(CLASSES:.java=.class)
 compiletests:
 						$(JC) -cp $(JUNITPATH) -d $(JCLASSDIR) $(TESTFILES)
 
+runFilterUtility:
+								java -cp ./bin/ FilterUtility
 
 test:
 		 java -cp $(JUNITPATH) TestRunner
