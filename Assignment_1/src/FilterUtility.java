@@ -47,7 +47,7 @@ public class FilterUtility
     boolean isRunning = true;
     while(isRunning)
     {
-      System.out.println("Select an option:\n1 - Sequential Median Filter\n2 - Parallel Median Filter\n5 - Change Bucket Size\n6 - Get computer stats\n7 - Toggle Print Data\n10 - Exit");
+      System.out.println("Select an option:\n1 - Sequential Median Filter\n2 - Parallel Median Filter\n5 - Change Bucket Size\n6 - Get computer stats\n7 - Toggle Print Data\n8 - Change Output File\n10 - Exit");
       switch(Integer.parseInt(infoLine.nextLine()))
       {
         case 1:
@@ -84,6 +84,10 @@ public class FilterUtility
             System.out.println("Data will be sent to the output file.");
             canPrint = true;
           }
+          break;
+        case 8:
+          System.out.println("Please enter a new out file");
+          outputFile = infoLine.nextLine();
           break;
         case 10:
           isRunning = false;
